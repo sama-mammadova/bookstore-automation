@@ -34,7 +34,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 Cypress.Commands.add('login', () => {
     let username = 'temp_user_' + Date.now()
-    let password = Cypress.env('default_password')
+    let password = Cypress.env('DEFAULT_PASSWORD')
     let body = {"userName": username, "password": password}
     let requestInfo = {
         method: 'POST',
